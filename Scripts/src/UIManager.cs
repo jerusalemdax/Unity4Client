@@ -4,7 +4,7 @@ using UnityEngine.UI;
 class UIManager
 {
     private static UIManager _instance;
-    private UIManager() { }
+
     public static UIManager Instance
     {
         get
