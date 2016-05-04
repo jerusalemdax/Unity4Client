@@ -1,6 +1,14 @@
+bin
+obj
 .vs
 Library
 Temp
 *.csproj
 *.sln
 UnityVS
+UnityVS.meta
+Build
+Assets/StreamingAssets
+Assets/StreamingAssets.meta
+!Scripts/Scripts.sln
+!Scripts/Scripts.csproj
