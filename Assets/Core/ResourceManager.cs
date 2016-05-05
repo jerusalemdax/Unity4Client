@@ -19,6 +19,6 @@ public class ResourceManager{
 
     public Object LoadResource(string path)
     {
-        return EditorGUIUtility.Load(path);
+        return AssetDatabase.LoadAssetAtPath("Assets/Prefabs/" + path, typeof(GameObject));
     }
 }
