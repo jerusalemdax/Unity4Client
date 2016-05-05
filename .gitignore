@@ -12,3 +12,4 @@ Assets/StreamingAssets
 Assets/StreamingAssets.meta
 !Scripts/Scripts.sln
 !Scripts/Scripts.csproj
+*.userprefs
