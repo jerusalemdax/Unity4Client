@@ -3,6 +3,8 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<CommonDllPath>../Library/UnityAssemblies</CommonDllPath>
+	<UIDllPath>../Library/UnityAssemblies</UIDllPath>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{87044393-6696-4D07-3815-2463D890CDAE}</ProjectGuid>
@@ -49,18 +51,15 @@
     <Reference Include="Boo.Lang" />
     <Reference Include="UnityScript.Lang" />
     <Reference Include="UnityEngine">
-      <HintPath>..\Library\UnityAssemblies\UnityEngine.dll</HintPath>
+      <HintPath>$(CommonDllPath)/UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
-      <HintPath>..\Library\UnityAssemblies\UnityEditor.dll</HintPath>
+      <HintPath>$(CommonDllPath)/UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="UnityEngine.UI">
-      <HintPath>..\Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>..\Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
+      <HintPath>$(UIDllPath)/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\Library\ScriptAssemblies\Assembly-CSharp.dll</HintPath>
