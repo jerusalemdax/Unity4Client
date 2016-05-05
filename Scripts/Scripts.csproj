@@ -54,7 +54,7 @@
       <HintPath>$(CommonDllPath)/UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
-      <HintPath>$(CommonDllPath)/UnityEngine.dll</HintPath>
+      <HintPath>$(CommonDllPath)/UnityEditor.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
