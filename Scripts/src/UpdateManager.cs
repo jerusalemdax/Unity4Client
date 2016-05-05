@@ -19,16 +19,18 @@ class UpdateManager
     public void Start()
     {
         Debug.Log("UpdateManager Start");
-        var obj = ResourceManager.Instance.LoadResource("UpdatePanel.prefab") as GameObject;
-        if (obj != null)
+        ResourceManager.Instance.LoadResource("UpdatePanel.prefab", obj =>
         {
-            GameObject go = Object.Instantiate(obj) as GameObject;
-            if (go != null)
+            if (obj != null)
             {
-                go.name = obj.name;
-                go.transform.SetParent(GameObject.Find("UI").transform, false);
+                GameObject go = Object.Instantiate(obj) as GameObject;
+                if (go != null)
+                {
+                    go.name = obj.name;
+                    go.transform.SetParent(GameObject.Find("UI").transform, false);
+                }
             }
-        }
+        });
     }
 
     public void OnDestroy()

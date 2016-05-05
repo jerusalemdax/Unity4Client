@@ -2,13 +2,19 @@
 using System.IO;
 using UnityEngine;
 
-public class Main : MonoBehaviour {
-
+public class Main : MonoBehaviour
+{
+    private static Main Instance;
     private CLRSharp.CLRSharp_Environment _env;
     private CLRSharp.ThreadContext _context;
     private CLRSharp.IMethod _startMethod;
     private CLRSharp.IMethod _updateMethod;
     private CLRSharp.IMethod _onDestroyMethod;
+
+    void Awake()
+    {
+        Instance = this;
+    }
 
     void Start () {
 	    Debug.Log("Unity version:" + Application.unityVersion);
@@ -52,6 +58,11 @@ public class Main : MonoBehaviour {
             _onDestroyMethod.Invoke(_context, null, null);
         }
         Debug.Log("Main OnDestroy");
+    }
+
+    public static void StartCoroutineFunc(IEnumerator func)
+    {
+        Instance.StartCoroutine(func);
     }
 
     public class Logger : CLRSharp.ICLRSharp_Logger//实现L#的LOG接口
